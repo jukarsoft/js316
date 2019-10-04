@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body  {
+			height: 500px;
+			border: 1px solid black	;
+		}
+	</style>
+	<script type="text/javascript">
+				
+		function mostrarContenido (valor) {
+			//alert(document.getElementById(id).value);  // trabajando con This.id
+			alert(valor);
+			
+		}
+
+		function saludar() {
+			alert('hola');
+		}
+
+	</script>
+</head>
+<body onclick="saludar()">
+		<form name="formulario" id="formulario">
+			<input type="text" name="texto" placeholder="introduce un texto" id="texto" onblur="mostrarContenido(this.value)">
+			<br><br>
+			<select id="operacion" name="operacion"  onchange="mostrarContenido(this.value)">
+									<option value='1'>Opcion 1</option>
+					  				<option value='2'>Opcion 2</option>
+					  				<option value='3'>Opcion 3</option>
+		 	</select>
+		 	<br><br>
+		 	<input type="button" name="Salida" id="boton" value="boton" ondblclick="mostrarContenido(this.value)">
+
+		</form>
+
+</body>
+</html>
